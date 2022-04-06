@@ -23,7 +23,13 @@ def predict():
     prediction = model.predict(data)
     output_text = "Text:" + str(request.values['Review'])
     output = "Class: " + str(prediction)
-    return jsonify(output_text, output)
+    # return jsonify(output_text, output)
+    if prediction==0:
+        return render_template('home.html', prediction_text='Negative :(',
+                               )
+    else:
+        return render_template('home.html', prediction_text='Positive :)',
+                              )
 
 if __name__ == '__main__':
     app.run(debug=True)

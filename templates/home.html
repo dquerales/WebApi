@@ -14,20 +14,16 @@
 <body>
  <div class="login">
 	<h1>Movie Reviews</h1>
-
      <!-- Form to enter new data for predictions  -->
     <form action="{{ url_for('predict')}}" method="POST">
     	<input type="text" name="Review" placeholder="Review" required="required" /><br>
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-
-   <br>
-   <br>
-  
-   
  </div>
- {{pred}}
+ 
+ <div>{{prediction_text}}</div>
+ 
+ <footer> Created by <a href="https://www.linkedin.com/in/daniel-querales/">Daniel Querales</a></footer>
 
 </body>
-<footer> Created by <a href="https://www.linkedin.com/in/daniel-querales/">Daniel Querales</a></footer>
 </html>
