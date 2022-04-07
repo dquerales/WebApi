@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Movie Reviews</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  <title>Movie Reviews</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
 </head>
 
 <body>
-
- <div class="login justify-content-center">
+ <div class="login">
 	<h1>Movie Reviews</h1>
      <!-- Form to enter new data for predictions  -->
     <form action="{{ url_for('predict')}}" method="POST">
@@ -24,7 +23,7 @@
  
  <div>{{prediction_text}}</div>
  
- <footer>Created by <a href="https://www.linkedin.com/in/daniel-querales/">Daniel Querales</a></footer>
+ <footer> Created by <a href="https://www.linkedin.com/in/daniel-querales/">Daniel Querales</a></footer>
 
 </body>
 </html>
